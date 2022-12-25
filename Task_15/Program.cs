@@ -10,7 +10,7 @@ if (DayWeek > 0 && DayWeek < 8)
 {
     if (DayWeek > 5 && DayWeek < 8) 
     {
-        WriteLine("Выходной день!");
+        WriteLine("Выходной день! Ура!");
     }
     else
     {
