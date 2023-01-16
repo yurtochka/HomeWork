@@ -5,17 +5,29 @@
 using static System.Console;
 Clear();
 
-WriteLine("Введите два числа A и B: "); 
+WriteLine("Enter two number A и B: "); 
 int A = Convert.ToInt32(ReadLine());
 int B = Convert.ToInt32(ReadLine());
-int x = 1;
+
+
 
 if (B >= 0)
 {
-    for (int i = 1; i <= B; i++)
-    {
-        x = A * x;
-    }
-    WriteLine(x);    
+    int result = NatDeg(A, B);
+    WriteLine(result);
 }
-else WriteLine("B - не натуральное число!");
+else
+    WriteLine("B - не натуральное число!");
+
+
+
+
+int NatDeg(int a, int b)
+{
+    int x = 1;
+    for (int i = 1; i <= b; i++)
+    {
+        x = a * x;
+    } 
+    return x;
+}
