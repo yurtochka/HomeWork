@@ -5,19 +5,22 @@
 using static System.Console;
 Clear();
 
-WriteLine("Enter two number A и B: "); 
+WriteLine("Enter a number A: "); 
 int A = Convert.ToInt32(ReadLine());
+WriteLine("Enter a number B: "); 
 int B = Convert.ToInt32(ReadLine());
-
-
 
 if (B >= 0)
 {
     int result = NatDeg(A, B);
-    WriteLine(result);
+    WriteLine();
+    WriteLine($"-- {A} ^ {B} = {result} --");
 }
 else
+{
+    WriteLine();
     WriteLine("B - не натуральное число!");
+}
 
 
 
