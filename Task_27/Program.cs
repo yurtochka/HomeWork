@@ -8,9 +8,8 @@ Clear();
 
 Write("Input number: ");
 int number = int.Parse(ReadLine()!);
-
-int sum = SumNumber(number);
-WriteLine(sum);
+WriteLine();
+WriteLine($"The sum of the digits of the number {number} = {SumNumber(number)}");
 
 
 
@@ -18,10 +17,11 @@ WriteLine(sum);
 int SumNumber(int A)
 {
     int result = 0;
-    for (int i = 0; i <= A; i++)
+    A = Math.Abs(A);
+    while (A > 0)
     {
         result = result + (A % 10);
         A = A / 10;
-    }
+    }   
     return result;
 }
