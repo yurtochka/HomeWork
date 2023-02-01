@@ -53,7 +53,7 @@ int[,] ProdArr(int[,] Arr1, int[,] Arr2)
         int y = 0;
         while  (xxx > 0)
         {
-            for (int j = 0; j < Arr2.GetLength(1); j++)
+            for (int j = 0; j < Arr2.GetLength(0); j++)
             {
                 prod = prod + Arr1[i,j] * Arr2[j,y];
             }
@@ -91,7 +91,7 @@ void PrintArray(int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Write($"{arr[i, j],3}");
+            Write($"{arr[i, j],5}");
         }
         WriteLine();
     }
